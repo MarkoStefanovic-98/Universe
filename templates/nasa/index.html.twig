@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NasaController!{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+    <div class="container text-center" style="margin-top: 20px;">
+        <h3>Les astéroide proche de la terre aujourd'hui :</h3><br>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Taille en mètre</th>
+                <th>Magnitude absolu</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ data.near_earth_objects.'~~'.0.name }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

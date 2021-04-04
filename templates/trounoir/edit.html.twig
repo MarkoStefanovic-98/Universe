@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Trounoir{% endblock %}
+
+{% block body %}
+    <h1>Edit Trounoir</h1>
+
+    {{ include('trounoir/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('trounoir_index') }}">back to list</a>
+
+    {{ include('trounoir/_delete_form.html.twig') }}
+{% endblock %}

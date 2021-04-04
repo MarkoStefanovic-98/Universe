@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trounoir index{% endblock %}
+
+{% block body %}
+    <h1>Trounoir index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Vient de la Galaxie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for trounoir in trounoirs %}
+            <tr>
+                <td>{{ trounoir.id }}</td>
+                <td>{{ trounoir.nom }}</td>
+                <td>{{ trounoir.idg.nom }}</td>
+                <td>
+                    <a href="{{ path('trounoir_show', {'id': trounoir.id}) }}"><button type="button" class="btn btn-primary">show</button></a>
+                    <a href="{{ path('trounoir_edit', {'id': trounoir.id}) }}"><button type="button" class="btn btn-success">edit</button></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('trounoir_new') }}"><button type="button" class="btn btn-info">Create new</button></a>
+{% endblock %}

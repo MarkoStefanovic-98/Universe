@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Systeme{% endblock %}
+
+{% block body %}
+    <h1>Systeme</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ systeme.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ systeme.nom }}</td>
+            </tr>
+            <tr>
+                <th>Etoile</th>
+                <td>{{ systeme.etoile }}</td>
+            </tr>
+            <tr>
+                <th>Nb_planete</th>
+                <td>{{ systeme.nbPlanete }}</td>
+            </tr>
+            <tr>
+                <th>Galaxie</th>
+                <td>{{ systeme.idg.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('systeme_index') }}"><button type="button" class="btn btn-success">back to list</button></a>
+
+    <a href="{{ path('systeme_edit', {'id': systeme.id}) }}"><button type="button" class="btn btn-primary">edit</button></a>
+
+    {{ include('systeme/_delete_form.html.twig') }}
+{% endblock %}

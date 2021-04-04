@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Galaxie{% endblock %}
+
+{% block body %}
+    <h1>Modifier Galaxie</h1>
+
+    {{ include('galaxie/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('galaxie_index') }}"><button type="button" class="btn btn-primary">Revenir</button></a>
+
+    {{ include('galaxie/_delete_form.html.twig') }}
+{% endblock %}

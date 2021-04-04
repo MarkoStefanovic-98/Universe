@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./image/2.jpg" alt="Image" style="height: 600px;">
+                <div class="carousel-caption">
+                    <h3>Découvrez l'univers</h3>
+                    <p>et ses secret...</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="./image/espace.jpg" alt="Image" style="height: 600px;">
+                <div class="carousel-caption">
+                    <h3>Informez-vous</h3>
+                    <p>sur les asteroides</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center" style="margin-top: 20px;">
+        <h3>Vous ne souhaitez pas descendre ? Alors découvrez tout directement !</h3><br>
+        <div class="row">
+            <div class="col-md-4" style="margin-top: 30px">
+                <div class="card" style="width:300px">
+                    <img class="card-img-top" src="./image/univercard.jpg" alt="Card image" style="width:300px; height: 250px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Les univers (Multi-ver)</h4>
+                        <p class="card-text">Découvrez nos univers</p>
+                        <a href="{{ path("univers_index") }}" class="btn btn-primary stretched-link">Consulter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 30px">
+                <div class="card" style="width:300px">
+                    <img class="card-img-top" src="./image/galaxie.jpg" alt="Card image" style="width:300px; height: 250px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Les Galaxies</h4>
+                        <p class="card-text">Découvrez les Galaxies</p>
+                        <a href="{{ path("galaxie_index") }}" class="btn btn-primary stretched-link">Consulter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 30px">
+                <div class="card" style="width:300px">
+                    <img class="card-img-top" src="./image/systeme.jpg" alt="Card image" style="width:300px; height: 250px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Les Systèmes</h4>
+                        <p class="card-text">Découvrez tous les Systemes Solaires</p>
+                        <a href="{{ path("systeme_index") }}" class="btn btn-primary stretched-link">Consulter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 30px">
+                <div class="card" style="width:300px">
+                    <img class="card-img-top" src="./image/planete.jpg" alt="Card image" style="width:300px; height: 250px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Les Planètes</h4>
+                        <p class="card-text">Découvrez les Planètes connu à ce jour</p>
+                        <a href="{{ path("planete_index") }}" class="btn btn-primary stretched-link">Consulter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 30px">
+                <div class="card" style="width:300px">
+                    <img class="card-img-top" src="./image/trounoir.jpg" alt="Card image" style="width:300px; height: 250px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Les Trous-noir</h4>
+                        <p class="card-text">Découvrez les Trous-noir</p>
+                        <a href="{{ path("trounoir_index") }}" class="btn btn-primary stretched-link">Consulter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Trounoir{% endblock %}
+
+{% block body %}
+    <h1>Create new Trounoir</h1>
+
+    {{ include('trounoir/_form.html.twig') }}
+
+    <a href="{{ path('trounoir_index') }}">back to list</a>
+{% endblock %}

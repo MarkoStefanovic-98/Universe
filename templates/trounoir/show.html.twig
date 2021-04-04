@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Trounoir{% endblock %}
+
+{% block body %}
+    <h1>Trounoir</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ trounoir.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ trounoir.nom }}</td>
+            </tr>
+            <tr>
+                <th>Galaxie</th>
+                <td>{{ trounoir.idg.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('trounoir_index') }}"><button type="button" class="btn btn-success">back to list</button></a>
+
+    <a href="{{ path('trounoir_edit', {'id': trounoir.id}) }}"><button type="button" class="btn btn-primary">edit</button></a>
+
+    {{ include('trounoir/_delete_form.html.twig') }}
+{% endblock %}

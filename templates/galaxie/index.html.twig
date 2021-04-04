@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galaxie index{% endblock %}
+
+{% block body %}
+    <h1>Galaxie index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Univers</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for galaxie in galaxies %}
+            <tr>
+                <td>{{ galaxie.id }}</td>
+                <td>{{ galaxie.nom }}</td>
+                <td>{{ galaxie.idu.nom }}</td>
+                <td>
+                    <a href="{{ path('galaxie_show', {'id': galaxie.id}) }}"><button type="button" class="btn btn-primary">Voir</button></a>
+                    <a href="{{ path('galaxie_edit', {'id': galaxie.id}) }}"><button type="button" class="btn btn-success">Modifier</button></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="col-md-12">
+    <a href="{{ path('galaxie_new') }}"><button type="button" class="btn btn-info">Ajouter</button></a>
+    </div>
+{% endblock %}

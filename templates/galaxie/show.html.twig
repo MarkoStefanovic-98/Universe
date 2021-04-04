@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galaxie{% endblock %}
+
+{% block body %}
+    <h1>Galaxie</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ galaxie.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ galaxie.nom }}</td>
+            </tr>
+            <tr>
+                <th>Appartient à l'Univers de</th>
+                <td>{{ galaxie.idu.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{{ path('galaxie_edit', {'id': galaxie.id}) }}"><button type="button" class="btn btn-success">edit</button></a>
+    <a href="{{ path('galaxie_index') }}"><button type="button" class="btn btn-primary">back to list</button></a>
+
+    {{ include('galaxie/_delete_form.html.twig') }}
+{% endblock %}
